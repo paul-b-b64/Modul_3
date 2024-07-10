@@ -14,7 +14,7 @@ def dict_to_list(dct): # преобразование словаря в спис
         list_dict += element
     return list_dict
 
-def ploskiy_spisok(massiv): # преобразование многомерного списка в одномерный
+def ploskiy_spisok(massiv): # преобразование многомерной структуры в одномерный список
     flag = True
     while flag:
         list_vnutr = []
@@ -42,14 +42,12 @@ def sum_elts_list(list_): # сумматор элементов списка
         else: summa_ += i
     return summa_
 
-def calculate_structure_sum(arg):
-    sum_elts_list(ploskiy_spisok(arg))
-
+def calculate_structure_sum(arg): # итоговая сборная функция
+    res = sum_elts_list(ploskiy_spisok(arg))
+    return res
 
 result = calculate_structure_sum(data_structure)
 print(result)
-
-# print(sum_elts_list(ploskiy_spisok(data_structure)))
 
 
 
